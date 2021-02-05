@@ -20,11 +20,11 @@ calculateSalary = (
   const finalSalary = grossPay - totalDeductions + additions;
 
   const salaryObj = {
-    employeeName: employeeName,
-    grossPay: grossPay,
-    totalDeductions: totalDeductions,
-    additions: additions,
-    finalSalary: finalSalary,
+    employeeName,
+    grossPay,
+    totalDeductions,
+    additions,
+    finalSalary
   };
 
   generateSalarySlip(salaryObj);
@@ -63,14 +63,15 @@ calculateSalaryHandler = () => {
 };
 
 generateSalarySlip = (salaryObj) => {
+    const {employeeName,grossPay,totalDeductions,additions,finalSalary} = salaryObj;
   document.getElementById("salary-calculator").style.display = "none";
   document.getElementById("salary-slip").style.display = "block";
 
-  document.getElementById("employee-name").innerHTML = salaryObj.employeeName;
-  document.getElementById("gross-salary").innerHTML = salaryObj.grossPay;
+  document.getElementById("employee-name").innerHTML = employeeName;
+  document.getElementById("gross-salary").innerHTML = grossPay;
   document.getElementById("total-deduction").innerHTML =
-    salaryObj.totalDeductions;
-  document.getElementById("total-addition").innerHTML = salaryObj.additions;
-  document.getElementById("final-salary").innerHTML = salaryObj.finalSalary;
+    totalDeductions;
+  document.getElementById("total-addition").innerHTML = additions;
+  document.getElementById("final-salary").innerHTML = finalSalary;
 };
 
