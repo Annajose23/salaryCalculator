@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Salary Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/app.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="salary-calculator" id="salary-calculator">
+  <h2>Salary calculator</h2>
+  <form >
+    <div class="form-group">
+      <label for="emp-name">Enter Employee Name:</label>
+      <input type="text" class="form-control" id="emp-name" placeholder="Enter Employee Name" name="emp-name">
+    </div>
+    <div class="form-group">
+      <label for="gross-pay">Enter Your Gross Pay:</label>
+      <input type="text" class="form-control" id="gross-pay" placeholder="Enter Your Gross Salary" name="gross-pay">
+    </div>
+    <h3>Additions in Dollars</h3>
+    <div class="form-group">
+      <label for="bonus">Bonus $:</label>
+      <input type="text" class="form-control" id="bonus" placeholder="Enter bonus" name="bonus">
+    </div>
+    <div class="form-group">
+      <label for="allowance">Allowance $:</label>
+      <input type="text" class="form-control" id="allowance" placeholder="Enter Allowance" name="allowance">
+    </div>
+    <h3>Deductions in Percentage</h3>
+    <div class="form-group">
+      <label for="income-tax">Income tax %:</label>
+      <input type="text" class="form-control" id="income-tax" placeholder="Enter Income Tax" name="income-tax">
+    </div>
+    <div class="form-group">
+      <label for="emp-insurance">Employment Insurance %:</label>
+      <input type="text" class="form-control" id="emp-insurance" placeholder="Enter EI" name="emp-insurance">
+    </div>
+    <div class="form-group">
+      <label for="cpp">Canada Pension Plan %:</label>
+      <input type="text" class="form-control" id="cpp" placeholder="Enter Canada Pension Plan" name="cpp">
+    </div>
+    <div class="checkbox">
+      <p>Choose the gender of employee: </p>
+      <label><input type="radio" name="gender" class="gender-checkbox" id="male" value="male" > Male</label>
+      <label><input type="radio" name="gender" class="gender-checkbox" id="female" value="female" > Female</label>
+    </div>
+    <div class="checkbox">
+      <p>Choose the number of dependents: </p>
+      <label><input type="radio" name="dependency" class="dependency-checkbox" id="two" value="2"> 2</label>
+      <label><input type="radio" name="dependency" class="dependency-checkbox" id="three" value="3"> 3</label>
+      <label><input type="radio" name="dependency" class="dependency-checkbox" id="four" value="4"> 4</label>
+    </div>
+    <button type="submit" class="btn btn-default" id="calculate">Calculate</button>
+  </form>
+</div>
+
+<div class="salary-slip" id="salary-slip">
+  <h3>Salary Slip</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td id="employee-name"></td>
+      </tr>
+      <tr>
+        <td>Gross Salary</td>
+        <td id="gross-salary"></td>
+      </tr>
+      <tr>
+        <td>Total Deductions</td>
+        <td id="total-deduction"></td>
+      </tr>
+      <tr>
+        <td>Total Addition</td>
+        <td id="total-addition"></td>
+      </tr>
+      <tr>
+        <td>Final Salary </td>
+        <td id="final-salary"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</body>
+</html>
